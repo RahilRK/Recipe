@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        android:layout_marginTop="@dimen/margin6"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivRecipeImage"
+                android:layout_width="@dimen/margin80"
+                android:layout_height="@dimen/margin80"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_appicon"
+                android:layout_margin="@dimen/margin10"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ivRecipeImage"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin10"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recipeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recipe_name"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/ivRemove"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <TextView
+                        android:id="@+id/recipePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hundredrupees"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:textStyle="bold"
+                        android:layout_below="@id/recipeName"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/ivRemove"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <ImageView
+                        android:id="@+id/ivRemove"
+                        android:layout_width="@dimen/margin30"
+                        android:layout_height="@dimen/margin30"
+                        android:src="@drawable/ic_delete"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin5"
+                        app:tint="@color/mred" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fabMinus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="@dimen/margin5"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_minus"
+                            app:backgroundTint="@color/white"
+                            app:fabCustomSize="@dimen/margin30"
+                            app:maxImageSize="@dimen/margin16"
+                            app:shapeAppearanceOverlay="@style/fab_square"
+                            app:tint="@color/secondaryColor" />
+
+                        <TextView
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/one"
+                            android:layout_centerVertical="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textSize16"
+                            android:layout_toEndOf="@id/fabMinus"
+                            />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fabAdd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin5"
+                            android:layout_toEndOf="@id/quantity"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_add"
+                            app:backgroundTint="@color/secondaryColor"
+                            app:fabCustomSize="@dimen/margin30"
+                            app:maxImageSize="@dimen/margin16"
+                            app:shapeAppearanceOverlay="@style/fab_square"
+                            app:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/notAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_available"
+                        android:textColor="@color/mblue"
+                        android:textSize="@dimen/textSize16"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

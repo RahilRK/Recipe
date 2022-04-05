@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        android:layout_marginTop="@dimen/margin6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vendorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vendor_name"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="@dimen/textSize16"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/margin5"
+                    android:layout_toStartOf="@id/ivdelete"/>
+
+                <ImageView
+                    android:id="@+id/ivdelete"
+                    android:layout_width="@dimen/margin30"
+                    android:layout_height="@dimen/margin30"
+                    android:src="@drawable/ic_delete"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/mred" />
+
+                <TextView
+                    android:id="@+id/vendorMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_number"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_below="@id/vendorName"
+                    android:layout_toStartOf="@id/ivdelete"
+                    android:textSize="@dimen/textSize16"/>
+
+                <TextView
+                    android:id="@+id/vendorShopAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_marginEnd="@dimen/margin30"
+                    android:layout_below="@id/vendorMobileNumber"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize16"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

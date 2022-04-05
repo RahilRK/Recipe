@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.AddVendor.AddVendor">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="@color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin16">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vendorNametf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/vendor_name"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enter_vendor_name"
+                app:counterEnabled="true"
+                app:counterMaxLength="60"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vendorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="60"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vendorMobileNumbertf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:hint="@string/mobile_number"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enter_mobile_number"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:prefixText="+91"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vendorMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:text=""
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vendorShopAddresstf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:hint="@string/address"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enter_vendor_shop_address"
+                app:counterEnabled="true"
+                app:counterMaxLength="200"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vendorShopAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin100"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:gravity="top"
+                    android:maxLength="200"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addbt"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin16"
+                android:text="@string/add"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

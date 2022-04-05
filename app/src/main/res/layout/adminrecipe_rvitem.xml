@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        android:layout_marginTop="@dimen/margin6"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/ivRecipeImage"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/margin10"
+                >
+
+                <LinearLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recipeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recipe_name"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize18"/>
+
+                    <TextView
+                        android:id="@+id/recipePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hundredrupees"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textSize16"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status"
+                    android:layoutDirection="ltr"
+                    android:textSize="@dimen/textSize16"
+                    android:theme="@style/SCBSwitch"
+                    android:clickable="false"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivRecipeImage"
+                android:layout_width="@dimen/margin100"
+                android:layout_height="@dimen/margin100"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_appicon"
+                android:layout_marginEnd="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

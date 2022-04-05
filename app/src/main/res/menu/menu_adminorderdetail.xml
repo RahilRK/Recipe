@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.MainActivity">
+
+    <item  android:id="@+id/menuorderstatuslog"
+        android:title="@string/order_status_detail"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_orderstatuslog"/>
+</menu>

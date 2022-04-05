@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightgraytoo"
+    android:orientation="vertical"
+    tools:context=".CartFrag.CartFrag">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            app:contentInsetEnd="@dimen/margin0"
+            app:contentInsetLeft="@dimen/margin0"
+            app:contentInsetRight="@dimen/margin0"
+            app:contentInsetStart="@dimen/margin0"
+            android:background="@color/white"
+            app:titleTextColor="@color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/margin150"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="@dimen/margin6"
+                    android:text="@string/your_cart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize16"
+                    app:backgroundTint="@color/white"
+                    android:layout_centerInParent="true"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_above="@+id/cartSummaryLayout"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/nodatafoundlo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:id="@+id/nodatafoundiv"
+                        android:layout_width="@dimen/margin80"
+                        android:layout_height="@dimen/margin80"
+                        android:src="@drawable/ic_cart_fill"
+                        android:layout_centerInParent="true"
+                        app:tint="@color/mgray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_cart_is_empty"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/mgray"
+                        android:textSize="@dimen/textSize18"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:layout_below="@id/nodatafoundiv"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/cartSummaryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mainColor"
+            android:padding="@dimen/margin16"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSize16"
+                android:textColor="@color/black"
+                android:text="@string/dash"/>
+
+            <TextView
+                android:id="@+id/orderSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSize16"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:text="@string/order_summary"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="@dimen/margin16"
+        >
+
+        <ImageView
+            android:id="@+id/loginiv"
+            android:layout_width="@dimen/margin80"
+            android:layout_height="@dimen/margin80"
+            android:src="@drawable/ic_account"
+            android:layout_centerInParent="true"
+            app:tint="@color/mgray" />
+
+        <TextView
+            android:id="@+id/loginLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_to_continue"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/mgray"
+            android:textSize="@dimen/textSize18"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_below="@id/loginiv"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginbt"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textStyle="bold"
+            app:iconTint="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_below="@+id/loginLabel"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

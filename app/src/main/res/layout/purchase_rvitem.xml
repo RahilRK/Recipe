@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        android:layout_marginTop="@dimen/margin6"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin16">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:layout_alignParentTop="true"
+                android:textSize="@dimen/textSize16"
+                android:layout_marginEnd="@dimen/margin5"
+                android:layout_toStartOf="@id/ivdelete"/>
+
+            <ImageView
+                android:id="@+id/ivdelete"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_delete"
+                android:visibility="visible"
+                app:tint="@color/mred" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_below="@id/name"
+                android:textSize="@dimen/textSize16"/>
+
+            <TextView
+                android:id="@+id/purchasePrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_below="@id/quantity"
+                android:textColor="@color/mblue"
+                android:textSize="@dimen/textSize16"/>
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_below="@id/purchasePrice">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/vendorName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin0"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/textSize16"
+                        android:text="@string/dash"
+                        />
+
+                    <TextView
+                        android:id="@+id/billNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin0"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/textSize16"
+                        android:text="@string/dash"
+                        />
+
+                    <TextView
+                        android:id="@+id/enterBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin0"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/textSize16"
+                        android:text="@string/dash"
+                        />
+
+                </LinearLayout>
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin5"
+                android:layout_below="@id/expandable_layout"
+                >
+
+                <TextView
+                    android:id="@+id/purchaseTime"
+                    android:layout_width="@dimen/margin0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/dash"
+                    android:textColor="@color/secondaryColor" />
+
+                <TextView
+                    android:id="@+id/viewDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/view_details"
+                    android:textColor="@color/secondaryColor"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

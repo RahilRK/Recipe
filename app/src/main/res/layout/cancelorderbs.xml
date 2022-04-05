@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cancelReasontf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin16"
+        android:hint="@string/remark"
+        app:hintTextColor="@color/black"
+        app:helperTextEnabled="true"
+        app:helperText="@string/entercancelreason"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        android:layout_marginStart="@dimen/margin30"
+        android:layout_marginEnd="@dimen/margin30"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cancelReason"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin100"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:gravity="top"
+            android:maxLength="200"
+            android:text=""
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

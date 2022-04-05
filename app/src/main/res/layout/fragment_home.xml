@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/lightgraytoo"
+    tools:context=".HomeFrag.HomeFrag">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:contentInsetEnd="@dimen/margin0"
+        app:contentInsetLeft="@dimen/margin0"
+        app:contentInsetRight="@dimen/margin0"
+        app:contentInsetStart="@dimen/margin0"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16"
+                android:layout_marginEnd="@dimen/margin16"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                >
+                <ImageView
+                    android:layout_width="@dimen/margin50"
+                    android:layout_height="@dimen/margin50"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin10"
+                    android:src="@drawable/ic_appicon"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recipeTypeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:paddingStart="@dimen/margin10"
+                android:paddingEnd="@dimen/margin10"
+                android:paddingTop="@dimen/margin3"
+                android:paddingBottom="@dimen/margin3"
+                android:visibility="gone"
+                android:background="@drawable/capsulebg">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/vegOnlySwitchCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/recipeTypeSwitchTheme"
+                    android:layout_centerVertical="true"
+                    android:checked="false"
+                    android:text="@string/veg_only"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/black"
+                    />
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="@dimen/margin150"
+                android:layout_height="wrap_content"
+                app:cornerRadius="@dimen/margin6"
+                android:text="@string/home"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                app:backgroundTint="@color/white"
+                android:layout_centerInParent="true"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_centerVertical="true"
+                />
+
+
+            <ImageView
+                android:id="@+id/ivSearchRecipe"
+                android:layout_width="@dimen/margin35"
+                android:layout_height="@dimen/margin35"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/mgray"
+                android:src="@drawable/ic_search"
+                android:padding="@dimen/margin5"
+                android:background="@drawable/circle_bg"
+                android:layout_marginEnd="@dimen/margin16"
+                />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/helloUserLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/helloUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/hello_user"
+                    android:textSize="@dimen/textSize20"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_marginEnd="@dimen/margin16"
+                    android:layout_marginTop="@dimen/margin10"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/what_do_you_want_to_eat"
+                    android:textSize="@dimen/textSize18"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_marginEnd="@dimen/margin16"
+                    />
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                />
+
+            <TextView
+                android:id="@+id/categoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/category"
+                android:textSize="@dimen/textSize20"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginStart="@dimen/margin16"
+                android:layout_marginEnd="@dimen/margin16"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recipeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

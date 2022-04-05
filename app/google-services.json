@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "822142496104",
+    "project_id": "khansama-hk",
+    "storage_bucket": "khansama-hk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822142496104:android:7e274132fa294d44313add",
+        "android_client_info": {
+          "package_name": "com.hksofttronix.khansama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822142496104-t88ju6337rr6j1jq45hgekaapt7ua1v1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hksofttronix.khansama",
+            "certificate_hash": "f83c88169fdee42e3524382a80737d7a19dd87fb"
+          }
+        },
+        {
+          "client_id": "822142496104-34a6o4pd4ma30gg0a9ng92le67p5t2to.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz9gXGVHuYJ7KVfsCs59yl2PwGnfa2CU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822142496104-34a6o4pd4ma30gg0a9ng92le67p5t2to.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

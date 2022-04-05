@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_adminhome"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_allorders"
+            android:icon="@drawable/ic_placeorder"
+            android:title="@string/allorders" />
+        <item
+            android:id="@+id/nav_purchase"
+            android:icon="@drawable/ic_purchase"
+            android:title="@string/purchase" />
+        <item
+            android:id="@+id/nav_recipe"
+            android:icon="@drawable/ic_recipe"
+            android:title="@string/recipe" />
+        <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/ic_inventory"
+            android:title="@string/inventory" />
+
+        <item
+            android:id="@+id/nav_recipecategory"
+            android:icon="@drawable/ic_category"
+            android:title="@string/recipe_category" />
+
+        <item
+            android:id="@+id/nav_vendor"
+            android:icon="@drawable/ic_vendor"
+            android:title="@string/vendor" />
+
+        <item
+            android:id="@+id/nav_adminlist"
+            android:icon="@drawable/ic_admin"
+            android:title="@string/all_admin" />
+
+        <item
+            android:id="@+id/nav_clienthome"
+            android:icon="@drawable/ic_clienthome"
+            android:checkable="false"
+            android:title="@string/client_home" />
+
+        <item
+            android:id="@+id/nav_adminlogout"
+            android:icon="@drawable/ic_logout"
+            android:checkable="false"
+            android:title="@string/logout" />
+
+    </group>
+</menu>

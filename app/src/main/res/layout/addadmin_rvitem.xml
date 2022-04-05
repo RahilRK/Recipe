@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        app:cardElevation="@dimen/margin0"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_alignParentTop="true"
+                >
+
+                <LinearLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/navMenuName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textColor="@color/black"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize18"/>
+
+                    <TextView
+                        android:id="@+id/navMenuDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textColor="@color/mgray"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:textSize="@dimen/textSize16"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/accessStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/access"
+                    android:layoutDirection="ltr"
+                    android:textSize="@dimen/textSize16"
+                    android:theme="@style/recipeTypeSwitchTheme"
+                    android:clickable="false"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_gravity="end"
+                    app:switchPadding="@dimen/margin3"
+                    android:checked="false"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin0.5"
+                android:layout_below="@+id/mainLayout"
+                android:background="@color/colorGrey"
+                />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

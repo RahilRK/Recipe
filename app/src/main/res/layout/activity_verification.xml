@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Verification"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin16"
+        android:layout_below="@+id/toolbar"
+        android:src="@drawable/ic_verification"/>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/logo"
+        android:layout_margin="@dimen/margin16">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verification_code"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/textSize16"
+            android:layout_marginTop="@dimen/margin10"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tvverificationcodemsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/please_type_the_verification_code_sent_to_demo"
+            android:gravity="center"
+            android:textSize="@dimen/textSize16"
+            android:layout_marginTop="@dimen/margin10"
+            android:textColor="@color/black" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:itemBackground="@color/blackTrans"
+            app:OtpItemCount="6"
+            app:OtpLineColor="#99FFFFFF"
+            app:OtpViewType="line"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin10"
+            />
+
+        <TextView
+            android:id="@+id/tvtimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timer"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/textSize16"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin10"
+            android:visibility="gone"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/verifyotpbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="@string/verify_otp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resendotpbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/secondaryColor"
+            app:rippleColor="@color/secondaryColor"
+            style="@style/Widget.MaterialComponents.Button"
+            android:text="@string/resend_otp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddAddress.AddAddress">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="@color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin16"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nametf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    app:hintTextColor="@color/black"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/entername"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="60"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="60"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobileNumbertf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin16"
+                    android:hint="@string/mobile_number"
+                    app:hintTextColor="@color/black"
+                    app:helperTextEnabled="true"
+                    app:helperText="@string/enter_mobile_number"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:prefixText="+91"
+                    app:endIconMode="clear_text"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addresstf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    app:hintTextColor="@color/black"
+                    app:helperTextEnabled="true"
+                    app:helperText="Enter address"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="200"
+                    android:layout_marginTop="@dimen/margin16"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin100"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:gravity="top"
+                        android:maxLength="200"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nearbytf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin16"
+                    android:hint="@string/near_by"
+                    app:hintTextColor="@color/black"
+                    app:helperTextEnabled="true"
+                    app:helperText="Enter near by known location"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="60"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nearby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="60"
+                        android:text=""
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/selectCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/selectCityTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_city"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@id/ivrefreshCityState"
+                        android:textSize="@dimen/textSize16"
+                        />
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/tap_here_to_select_city"
+                        android:textSize="@dimen/textSize14"
+                        android:layout_below="@+id/selectCityTitle"
+                        android:textStyle="bold"
+                        android:layout_toStartOf="@id/ivrefreshCityState"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivrefreshCityState"
+                        android:layout_width="@dimen/margin25"
+                        android:layout_height="@dimen/margin25"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin5"
+                        android:visibility="visible"
+                        android:src="@drawable/ic_refresh"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin0.5"
+                    android:layout_marginTop="@dimen/margin8"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:background="@color/colorGrey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:text="@string/state"
+                        />
+
+                    <TextView
+                        android:id="@+id/state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:hint="@string/state"
+                        android:textColorHint="@color/mblack"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin0.5"
+                    android:layout_marginTop="@dimen/margin8"
+                    android:layout_marginBottom="@dimen/margin8"
+                    android:background="@color/colorGrey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize16"
+                        android:textColor="@color/mgray"
+                        android:textStyle="bold"
+                        android:text="@string/pincode"
+                        />
+
+                    <TextView
+                        android:id="@+id/pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textSize14"
+                        android:textColor="@color/mblack"
+                        android:textStyle="bold"
+                        android:hint="@string/pincode"
+                        android:textColorHint="@color/mblack"
+                        />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/updateAddressbt"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin16"
+                    android:text="@string/change_detail"
+                    android:enabled="false"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

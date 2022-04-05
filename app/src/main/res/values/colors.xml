@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mainColor">#f9c42d</color>
+    <color name="secondaryColor">#fe724c</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="mblack">#212121</color>
+    <color name="mwhite">#FAFAFA</color>
+    <color name="mgray">#9E9E9E</color>
+    <color name="mred">#F44336</color>
+    <color name="mredlight">#EF5350</color>
+    <color name="mblue">#039BE5</color>
+    <color name="green">#22A828</color>
+    <color name="lightgraytoo">#f9f7f7</color>
+    <color name="gold">#ffd700</color>
+
+    <color name="blackTrans">#509E9E9E</color>
+
+    <color name="colorGrey">#dddddd</color>
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        android:layout_marginTop="@dimen/margin6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/textSize16"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin5"
+                    android:singleLine="true"
+                    android:layout_toStartOf="@id/mobileNumber"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/mobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_number"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize16"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin0.5"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/colorGrey"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:singleLine="true"
+                android:textColor="@color/mgray"
+                android:textSize="@dimen/textSize16"
+                />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/near_by"
+                android:singleLine="true"
+                android:textColor="@color/mgray"
+                android:textSize="@dimen/textSize16"
+                android:layout_marginTop="@dimen/margin5"
+                />
+
+            <TextView
+                android:id="@+id/nearBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/near_by"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:singleLine="true"
+                android:textColor="@color/mgray"
+                android:textSize="@dimen/textSize16"
+                android:layout_marginTop="@dimen/margin5"
+                />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin0.5"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/colorGrey"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/ivEditAddress"
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:src="@drawable/ic_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:id="@+id/ivRemoveAddress"
+                    android:layout_width="@dimen/margin30"
+                    android:layout_height="@dimen/margin30"
+                    android:src="@drawable/ic_delete"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/mred" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

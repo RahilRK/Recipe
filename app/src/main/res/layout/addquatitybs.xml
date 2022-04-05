@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/quantitytf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin16"
+        android:hint="@string/quantity"
+        app:hintTextColor="@color/black"
+        app:helperTextEnabled="true"
+        app:helperText="@string/enter_quantity"
+        app:counterEnabled="true"
+        app:counterMaxLength="5"
+        android:layout_marginStart="@dimen/margin30"
+        android:layout_marginEnd="@dimen/margin30"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:text=""
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

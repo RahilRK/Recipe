@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgraytoo"
+    android:orientation="vertical"
+    tools:context=".Address.Address">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:titleTextColor="@color/black"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_alignParentTop="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/callUsCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="@dimen/margin10"
+                app:cardElevation="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin16"
+                app:cardBackgroundColor="@color/mainColor"
+                >
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin200"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/margin50"
+                        android:layout_height="@dimen/margin50"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin16"
+                        android:src="@drawable/ic_call" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/call_us"
+                        android:textSize="@dimen/textSize16"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="@dimen/margin16"
+                        />
+
+                    <TextView
+                        android:id="@+id/contactUsMobileNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textSize="@dimen/textSize14"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginBottom="@dimen/margin5"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/emailUsCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/callUsCardView"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginBottom="@dimen/margin30"
+                app:cardCornerRadius="@dimen/margin10"
+                app:cardElevation="@dimen/margin10"
+                app:cardBackgroundColor="@color/mainColor"
+                >
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin200"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/margin50"
+                        android:layout_height="@dimen/margin50"
+                        android:src="@drawable/ic_email"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin16"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mail_us"
+                        android:textSize="@dimen/textSize16"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="@dimen/margin16"
+                        />
+
+                    <TextView
+                        android:id="@+id/contactUsEmailId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textSize="@dimen/textSize14"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginBottom="@dimen/margin5"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/whatAppUsCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/emailUsCardView"
+                app:cardCornerRadius="@dimen/margin10"
+                app:cardElevation="@dimen/margin10"
+                app:cardBackgroundColor="@color/mainColor"
+                android:layout_marginBottom="@dimen/margin16"
+                >
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin200"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/margin50"
+                        android:layout_height="@dimen/margin50"
+                        android:src="@drawable/ic_whatsapp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin16"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chat_with_us"
+                        android:textSize="@dimen/textSize16"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginBottom="@dimen/margin16"
+                        />
+
+                    <TextView
+                        android:id="@+id/contactUsWhatsAppNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textSize="@dimen/textSize14"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginBottom="@dimen/margin5"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

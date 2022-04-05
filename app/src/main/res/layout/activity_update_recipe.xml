@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.AddRecipe.AddRecipe">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="@color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin16">
+
+            <LinearLayout
+                android:id="@+id/addRecipePhotolo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mgray"
+                    android:textStyle="bold"
+                    android:text="@string/add_recipe_images"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mblack"
+                    android:textStyle="bold"
+                    android:hint="@string/tap_here_to_add_recipe_image"
+                    android:textColorHint="@color/mblack"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recipePhotosRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recipenametf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:hint="@string/recipe_name"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enterrecipename"
+                app:counterEnabled="true"
+                app:counterMaxLength="60"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/recipename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="60"
+                    android:text=""
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/addCategoryNamelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/selectCityTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_recipe_category"
+                    android:textColor="@color/mgray"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@id/ivrefreshCategory"
+                    android:textSize="@dimen/textSize16"
+                    />
+                <TextView
+                    android:id="@+id/categoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/tap_here_to_select_recipe_category"
+                    android:textSize="@dimen/textSize16"
+                    android:layout_below="@+id/selectCityTitle"
+                    android:textStyle="bold"
+                    android:layout_toStartOf="@id/ivrefreshCategory"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivrefreshCategory"
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:src="@drawable/ic_refresh"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/addInventorylo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin16"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mgray"
+                    android:textStyle="bold"
+                    android:text="@string/add_recipe_item"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mblack"
+                    android:textStyle="bold"
+                    android:hint="@string/tap_here_to_add_item"
+                    android:textColorHint="@color/mblack"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/inventoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/addInstructionslo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin16"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mgray"
+                    android:textStyle="bold"
+                    android:text="@string/add_instructions"
+                    />
+
+                <TextView
+                    android:id="@+id/addRecipeInstruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mblack"
+                    android:textStyle="bold"
+                    android:hint="@string/tap_here_to_add_recipe_instructions"
+                    android:textColorHint="@color/mblack"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vegNonVeglo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin16"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mgray"
+                    android:textStyle="bold"
+                    android:text="@string/add_recipe_type"
+                    />
+
+                <TextView
+                    android:id="@+id/recipeType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/mblack"
+                    android:textStyle="bold"
+                    android:hint="@string/tap_here_to_select_recipe_type"
+                    android:textColorHint="@color/mblack"
+                    />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                app:cardCornerRadius="@dimen/margin8"
+                app:cardBackgroundColor="@color/secondaryColor">
+
+                <TextView
+                    android:id="@+id/recipeCostPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSize16"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:padding="@dimen/margin16"
+                    android:hint="Recipe's ingredient price 0"
+                    android:textColorHint="@color/white"
+                    />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/additionalChargestf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:hint="@string/additional_charges"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enter_additional_charges"
+                app:counterEnabled="true"
+                app:counterMaxLength="4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/additionalCharges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amounttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:hint="@string/price"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enter_price"
+                app:counterEnabled="true"
+                app:counterMaxLength="4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updateRecipebt"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin16"
+                android:text="@string/change_detail"
+                android:enabled="false"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin5"
+        android:layout_marginStart="@dimen/margin6"
+        android:layout_marginEnd="@dimen/margin6"
+        android:layout_marginTop="@dimen/margin6"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivRecipeImage"
+                android:layout_width="@dimen/margin100"
+                android:layout_height="@dimen/margin100"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_appicon"
+                android:layout_margin="@dimen/margin10"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/ivRecipeImage"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin10"
+                >
+
+                <TextView
+                    android:id="@+id/recipeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dash"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textSize16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin5"
+                    >
+
+                    <TextView
+                        android:id="@+id/item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textColor="@color/black"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize16"/>
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dash"
+                        android:textColor="@color/black"
+                        android:layout_toEndOf="@+id/item"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textSize16"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/orderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin45"
+                    app:cornerRadius="@dimen/margin16"
+                    android:text="@string/processing"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_gravity="start"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

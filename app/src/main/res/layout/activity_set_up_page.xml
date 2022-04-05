@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/margin300"
+        android:layout_height="@dimen/margin300"
+        android:layout_gravity="center"
+        android:src="@drawable/loginbg"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin16"
+        android:contentDescription="@string/todo" />
+
+
+    <TextView
+        android:id="@+id/tvholdOnText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/account_setup"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize16"
+        android:layout_below="@id/logo"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin16"
+        android:layout_below="@id/tvholdOnText"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retrybt"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retry"
+        android:layout_below="@+id/progress_bar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>

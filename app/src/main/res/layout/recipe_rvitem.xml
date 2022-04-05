@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/margin10"
+       android:layout_marginStart="@dimen/margin6"
+       android:layout_marginEnd="@dimen/margin6"
+       >
+
+       <ImageView
+           android:id="@+id/ivRecipeImage"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/margin200"
+           android:layout_alignParentEnd="true"
+           android:src="@drawable/ic_appicon"
+           android:scaleType="centerCrop"
+           android:layout_centerVertical="true"
+           android:layout_alignParentTop="true"
+           />
+
+       <com.google.android.material.card.MaterialCardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:cardCornerRadius="@dimen/margin10"
+           app:cardElevation="@dimen/margin0"
+           android:layout_below="@id/ivRecipeImage"
+           android:layout_marginTop="-16dp"
+           android:background="@color/white">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/margin16"
+               android:layout_marginBottom="@dimen/margin16"
+               android:layout_marginStart="@dimen/margin10"
+               android:layout_marginEnd="@dimen/margin10"
+               >
+
+               <TextView
+                   android:id="@+id/recipeName"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/recipe_name"
+                   android:textColor="@color/black"
+                   android:singleLine="true"
+                   android:textStyle="bold"
+                   android:layout_alignParentTop="true"
+                   android:layout_marginEnd="@dimen/margin5"
+                   android:textSize="@dimen/textSize16"
+                   android:layout_toStartOf="@+id/recipeTypeLayout"
+                   />
+
+               <TextView
+                   android:id="@+id/recipePrice"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/hundredrupees"
+                   android:textColor="@color/black"
+                   android:layout_below="@id/recipeName"
+                   android:textSize="@dimen/textSize16"
+                   android:layout_marginTop="@dimen/margin3"
+                   android:layout_toStartOf="@+id/recipeTypeLayout"
+                   />
+
+               <LinearLayout
+                   android:id="@+id/recipeTypeLayout"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:id="@+id/recipeType"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/veg"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/textSize16"
+                       android:layout_marginTop="@dimen/margin3"
+                       />
+
+                   <ImageView
+                       android:id="@+id/ivRecipeType"
+                       android:layout_width="@dimen/margin25"
+                       android:layout_height="@dimen/margin25"
+                       android:layout_marginStart="@dimen/margin10"
+                       />
+
+               </LinearLayout>
+
+           </RelativeLayout>
+
+       </com.google.android.material.card.MaterialCardView>
+   </RelativeLayout>
+</LinearLayout>

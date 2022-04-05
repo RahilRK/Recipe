@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.AddInventory.AddInventory">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="@color/black"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin16">
+
+            <RelativeLayout
+                android:id="@+id/selectUnitlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/selectUnitTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_unit"
+                    android:textColor="@color/mgray"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@id/ivrefreshUnitList"
+                    android:textSize="@dimen/textSize16"
+                    />
+                <TextView
+                    android:id="@+id/tvUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tap_here_to_select_unit"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textSize16"
+                    android:layout_below="@+id/selectUnitTitle"
+                    android:layout_toStartOf="@id/ivrefreshUnitList"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivrefreshUnitList"
+                    android:layout_width="@dimen/margin25"
+                    android:layout_height="@dimen/margin25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin5"
+                    android:src="@drawable/ic_refresh"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inventoryNametf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin16"
+                android:hint="@string/inventory_name"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText="@string/enterinventoryname"
+                app:counterEnabled="true"
+                app:counterMaxLength="60"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inventoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="60"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/costPriceHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Purchase price"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSize16"
+                android:layout_marginTop="@dimen/margin16"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/costPricetf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/purchase_price"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText=""
+                app:counterEnabled="true"
+                app:counterMaxLength="5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/costPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/sellingPriceHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Selling price"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSize16"
+                android:visibility="gone"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sellingPricetf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/selling_price"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText=""
+                app:counterEnabled="true"
+                app:counterMaxLength="5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_marginTop="@dimen/margin6"
+                android:visibility="gone"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sellingPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/minimumQuantityPriceHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Minimum required quantity"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSize16"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/minimumQuantitytf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin6"
+                android:hint="@string/minimum_quantity"
+                app:hintTextColor="@color/black"
+                app:helperTextEnabled="true"
+                app:helperText=""
+                app:counterEnabled="true"
+                app:counterMaxLength="5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/minimumQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text=""
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addInventorybt"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin16"
+                android:text="@string/add_inventory"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

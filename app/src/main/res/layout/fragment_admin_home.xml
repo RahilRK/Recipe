@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.InventoryFrag.InventoryFrag">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:titleTextColor="@color/black"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:elevation="@dimen/margin0"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin3"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="13dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_sync"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize16"
+                        android:layout_marginBottom="-10dp"
+                        android:textStyle="bold"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lastSyncTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dash"
+                            android:textColor="@color/mblue"
+                            android:textSize="@dimen/textSize16"
+                            android:layout_alignParentStart="true"
+                            android:singleLine="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/refreshNowbt"
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/refreshNowbt"
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/refresh"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:icon="@drawable/ic_refresh"
+                            app:iconTint="@color/black" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/limitedInventoryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/margin16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/limited_inventory"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize16"
+                        android:textStyle="bold" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/viewAllInventory"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:textSize="@dimen/textSize16"-->
+                    <!--                    android:textColor="@color/purple_500"-->
+                    <!--                    android:layout_alignParentEnd="true"-->
+                    <!--                    android:text="@string/view_all"/>-->
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/limitedInventoryRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/orderListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/margin16">
+
+                    <TextView
+                        android:id="@+id/tvOrderlistTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/orderDetail"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/viewAllOrderlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/view_all"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="@dimen/textSize16" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
